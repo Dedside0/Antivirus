@@ -10,7 +10,7 @@ namespace Antivirus
     {
         public string FileName { get; set; }
         public string UserName { get; set; }
-        public int Size{ get; }
+        public int Size{ get; set; }
 
 
         public File(string filename, string userName, int size)
@@ -22,7 +22,9 @@ namespace Antivirus
 
         public override string ToString()
         {
-            return $"{FileName}/{UserName}/{Size}";
+            return $"{FileName} - {UserName} - {Size/(1024*8.0)} kb";
         }
+
+
     }
 }

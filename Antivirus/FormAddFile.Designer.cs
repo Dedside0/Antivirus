@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxFileSize = new System.Windows.Forms.TextBox();
             this.buttonSend = new System.Windows.Forms.Button();
+            this.comboBoxSizeType = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // textBoxFileName
@@ -98,11 +99,27 @@
             this.buttonSend.UseVisualStyleBackColor = true;
             this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
             // 
+            // comboBoxSizeType
+            // 
+            this.comboBoxSizeType.FormattingEnabled = true;
+            this.comboBoxSizeType.Items.AddRange(new object[] {
+            "бит",
+            "байт",
+            "кб",
+            "мб"});
+            this.comboBoxSizeType.Location = new System.Drawing.Point(335, 286);
+            this.comboBoxSizeType.Name = "comboBoxSizeType";
+            this.comboBoxSizeType.Size = new System.Drawing.Size(70, 21);
+            this.comboBoxSizeType.TabIndex = 7;
+            this.comboBoxSizeType.Text = "бит";
+            // 
             // FormAddFile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(494, 409);
+            this.ControlBox = false;
+            this.Controls.Add(this.comboBoxSizeType);
             this.Controls.Add(this.buttonSend);
             this.Controls.Add(this.textBoxFileSize);
             this.Controls.Add(this.label2);
@@ -111,7 +128,7 @@
             this.Controls.Add(this.labelUserName);
             this.Controls.Add(this.textBoxFileName);
             this.Name = "FormAddFile";
-            this.Text = "FormAddFile";
+            this.Text = "Добавление";
             this.Load += new System.EventHandler(this.FormAddFile_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -127,5 +144,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxFileSize;
         private System.Windows.Forms.Button buttonSend;
+        private System.Windows.Forms.ComboBox comboBoxSizeType;
     }
 }
