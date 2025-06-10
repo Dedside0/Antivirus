@@ -10,8 +10,19 @@ namespace Antivirus
     {
         public string FileName { get; set; }
         public string UserName { get; set; }
-        public int SizeKB { get; }
+        public int Size{ get; }
 
 
+        public File(string filename, string userName, int size)
+        {
+            FileName = filename;
+            UserName = userName;
+            Size = size;
+        }
+
+        public override string ToString()
+        {
+            return $"{FileName}/{UserName}/{Size}";
+        }
     }
 }
